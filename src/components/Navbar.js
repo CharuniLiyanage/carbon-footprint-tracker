@@ -12,19 +12,16 @@ function Navbar() {
       <div className="links">
         <Link to="/">Home</Link>
 
-        {user ? (
+        {user && (
           <>
             <Link to="/dashboard">Dashboard</Link>
-            <Link to="/tips">Eco Tips</Link>
+            <Link to="/tips">Tips</Link>
             <Link to="/progress">Progress</Link>
-            <Link to="/ai-advisor">AI Tips</Link>
-            <Link to="/ai-chat">AI Chat</Link>
-            
-            <button onClick={logout} className="logout-btn">
-              Logout
-            </button>
+            <button onClick={logout}>Logout</button>
           </>
-        ) : (
+        )}
+
+        {!user && (
           <>
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>

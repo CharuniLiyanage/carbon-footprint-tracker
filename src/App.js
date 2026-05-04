@@ -8,8 +8,6 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Progress from "./pages/Progress";
 import Tips from "./pages/Tips";
-import AiAdvisor from "./pages/AiAdvisor";
-import AiChat from "./pages/AiChat";
 
 import PublicRoute from "./components/PublicRoute";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -72,23 +70,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/ai-advisor"
-          element={
-            <ProtectedRoute>
-              <AiAdvisor />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/ai-chat"
-          element={
-            <ProtectedRoute>
-              <AiChat />
-            </ProtectedRoute>
-          }
-        />
+        
 
         {/* ❌ fallback route (optional but recommended) */}
         <Route path="*" element={<Home />} />
