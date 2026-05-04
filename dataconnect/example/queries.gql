@@ -1,0 +1,32 @@
+query ListAllUsers @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  users {
+    id
+    username
+    email
+    createdAt
+    avatarUrl
+    bio
+  }
+}
+
+mutation CreateNewUser($username: String!, $email: String!, $createdAt: Timestamp!) @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  user_insert(data: {
+    username: $username,
+    email: $email,
+    createdAt: $createdAt
+  })
+}
+
+query GetMyUserPosts @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  posts(where: {userUid: {eq_expr: "auth.uid"}}) {
+    id
+    content
+    createdAt
+  }
+}
+
+mutation UpdateMyAvatar($avatarUrl: String!) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  user_update(key: {id_expr: "auth.uid"}, data: {
+    avatarUrl: $avatarUrl
+  })
+}

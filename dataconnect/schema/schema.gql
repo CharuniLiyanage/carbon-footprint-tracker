@@ -1,0 +1,37 @@
+type User @table {
+  email: String!
+  passwordHash: String!
+  createdAt: Timestamp!
+  displayName: String
+  profilePictureUrl: String
+  goalCarbonFootprint: Float
+}
+
+type Activity @table {
+  user: User
+  activityType: ActivityType
+  amount: Float!
+  unit: String!
+  loggedAt: Timestamp!
+  carbonFootprintKgCo2e: Float!
+  notes: String
+}
+
+type ActivityType @table {
+  name: String!
+  category: String!
+  defaultUnit: String!
+  carbonFactor: Float!
+  description: String
+  iconUrl: String
+}
+
+type Goal @table {
+  user: User
+  targetValueKgCo2e: Float!
+  startDate: Date!
+  endDate: Date!
+  status: String!
+  name: String
+  description: String
+}

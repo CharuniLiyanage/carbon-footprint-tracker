@@ -1,0 +1,38 @@
+mutation SeedDatabase @transaction @auth(level: USER, insecureReason: "This mutation is for seeding purposes and will be run by an authenticated user.") {
+  # Example: Inserting multiple product records
+  product_insertMany(data: [
+    {
+      id: "prod-001",
+      name: "Wireless Headphones",
+      description: "High-quality wireless headphones with noise cancellation.",
+      price: 149.99,
+      stock: 100,
+      imageUrl: "https://example.com/headphones.jpg"
+    },
+    {
+      id: "prod-002",
+      name: "Smartwatch",
+      description: "Feature-rich smartwatch with health tracking and notifications.",
+      price: 199.99,
+      stock: 75,
+      imageUrl: "https://example.com/smartwatch.jpg"
+    },
+    {
+      id: "prod-003",
+      name: "Portable Charger",
+      description: "Compact and powerful portable charger for on-the-go devices.",
+      price: 29.99,
+      stock: 200,
+      imageUrl: "https://example.com/charger.jpg"
+    }
+  ])
+  # You can add other types here if your schema includes them
+  # For example:
+  # user_insertMany(data: [
+  #   {
+  #     id: "user-abc",
+  #     username: "testuser1",
+  #     email: "test1@example.com"
+  #   }
+  # ])
+}
