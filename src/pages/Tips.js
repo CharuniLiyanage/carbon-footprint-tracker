@@ -1,6 +1,9 @@
 import "./Tips.css";
+import { useTheme } from "../context/ThemeContext";
 
 function Tips() {
+  const { dark } = useTheme();
+
   const tips = [
     {
       icon: "🚶",
@@ -45,8 +48,9 @@ function Tips() {
   ];
 
   return (
-    <div className="tips-page">
+    <div className={dark ? "tips-page dark" : "tips-page"}>
       <h1>🌱 Eco Tips</h1>
+
       <p className="subtitle">
         Simple habits that help you reduce your carbon footprint
       </p>

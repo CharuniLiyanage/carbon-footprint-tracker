@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .dashboard {
   text-align: center;
   margin-top: 40px;
@@ -97,12 +98,72 @@ h1 {
   margin: 10px auto;
   padding: 8px 15px;
   background: red;
+=======
+/* =========================
+   DASHBOARD
+========================= */
+.dashboard {
+  text-align: center;
+  padding: 40px;
+  background: #f5f5f5;
+  color: #0f172a;
+  min-height: 100vh;
+  transition: 0.3s ease;
+}
+
+/* 🔥 DARK MODE (FIXED) */
+body.dark .dashboard {
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: #f1f5f9;
+}
+
+/* =========================
+   TITLE FIX
+========================= */
+.dashboard h1 {
+  font-weight: 700;
+}
+
+body.dark .dashboard h1 {
+  color: #f8fafc;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.form input {
+  margin: 10px;
+  padding: 12px;
+  width: 250px;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  background: #ffffff;
+  color: #000;
+}
+
+/* DARK INPUT */
+body.dark .form input {
+  background: #0f172a;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+>>>>>>> 97a84e5 (Update Files)
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .chart-container,
@@ -112,6 +173,52 @@ h1 {
     width: 90%;
   }
 
+=======
+/* =========================
+   CARD
+========================= */
+.card {
+  background: #e8f5e9;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 320px;
+
+  color: #0f172a;
+}
+
+/* 🔥 DARK CARD (IMPORTANT FIX) */
+body.dark .card {
+  background: #0f172a;
+  color: #f1f5f9;
+  border: 1px solid #1e293b;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   BADGE
+========================= */
+.badge {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* STATUS COLORS */
+.good {
+  color: #22c55e;
+}
+
+.bad {
+  color: #ef4444;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+>>>>>>> 97a84e5 (Update Files)
   .form input {
     width: 90%;
   }

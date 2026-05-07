@@ -3,47 +3,64 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate, Link } from "react-router-dom";
 import "./Auth.css";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-  try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    setError("");
+    setLoading(true);
 
-    if (userCredential.user) {
-      navigate("/dashboard");
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+
+      if (userCredential.user) {
+        navigate("/dashboard");
+      }
+    } catch (err) {
+      setError("Invalid email or password");
     }
-  } catch (err) {
-    alert(err.message);
-  }
-};
+
+    setLoading(false);
+  };
 
   return (
     <div className="auth-container">
       <div className="auth-card">
+
         <h2>🌱 Login</h2>
 
+        {/* ERROR MESSAGE */}
+        {error && <div className="error">{error}</div>}
+
+        {/* INPUTS */}
         <input
-          placeholder="Email"
+          type="email"
+          placeholder="Enter your email"
           onChange={(e) => setEmail(e.target.value)}
         />
 
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Enter your password"
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button onClick={handleLogin}>Login</button>
+        {/* BUTTON */}
+        <button onClick={handleLogin} disabled={loading}>
+          {loading ? "Logging in..." : "Login"}
+        </button>
 
+        {/* LINK */}
         <div className="auth-link">
           Don't have an account? <Link to="/register">Register</Link>
         </div>
+
       </div>
     </div>
   );

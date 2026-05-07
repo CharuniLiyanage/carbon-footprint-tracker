@@ -5,9 +5,21 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="home">
+    <div className={dark ? "home dark" : "home"}>
 
+<<<<<<< HEAD
       {/* HERO SECTION */}
+=======
+      {/* 🌙 DARK MODE BUTTON */}
+      <button
+        onClick={() => setDark(!dark)}
+        className="dark-btn-home"
+      >
+        {dark ? "☀️" : "🌙"}
+      </button>
+
+      {/* HERO */}
+>>>>>>> 97a84e5 (Update Files)
       <section className="hero">
         <h1>🌍 CarbonTrack</h1>
         <p>Monitor, understand, and reduce your carbon footprint easily.</p>

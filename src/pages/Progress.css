@@ -1,8 +1,37 @@
+<<<<<<< HEAD
 .progress-page {
   padding: 40px;
   text-align: center;
+=======
+/* =========================
+   BASE
+========================= */
+.progress {
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh;
+  transition: 0.3s ease;
+  background: #f8fafc;
+  color: #0f172a;
+>>>>>>> 97a84e5 (Update Files)
 }
 
+/* DARK MODE */
+.dark.progress {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* =========================
+   TITLE
+========================= */
+.progress h1 {
+  margin-bottom: 25px;
+}
+
+/* =========================
+   SUMMARY CARD
+========================= */
 .summary {
   display: flex;
   justify-content: center;
@@ -15,6 +44,7 @@
   background: #e8f5e9;
   padding: 20px;
   border-radius: 12px;
+<<<<<<< HEAD
   width: 180px;
 }
 
@@ -27,4 +57,64 @@
   background: #f1f8e9;
   padding: 20px;
   border-radius: 12px;
+=======
+  margin: 0 auto 25px auto;
+  width: 250px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dark .summary {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   LIST
+========================= */
+.list {
+  max-width: 400px;
+  margin: auto;
+}
+
+/* ITEM CARD */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 15px;
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+
+  transition: 0.3s ease;
+}
+
+.dark .item {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.bar-container {
+  flex: 1;
+  height: 8px;
+  background: #ddd;
+  margin: 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dark .bar-container {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(135deg, #0f766e, #22c55e);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+>>>>>>> 97a84e5 (Update Files)
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* RESET */
 body {
   margin: 0;
@@ -10,6 +11,43 @@ body {
   padding: 80px 20px;
   background: linear-gradient(to right, #2e7d32, #66bb6a);
   color: white;
+=======
+/* =========================
+   ROOT THEME COLORS
+========================= */
+:root {
+  --primary: #0f766e;
+  --accent: #22c55e;
+  --dark-bg: #0f172a;
+  --light-bg: #f8fafc;
+  --text-light: #e2e8f0;
+  --text-dark: #0f172a;
+}
+
+/* =========================
+   BASE PAGE
+========================= */
+.home {
+  min-height: 100vh;
+  padding-top: 60px;
+  transition: all 0.3s ease;
+  background: var(--light-bg);
+  color: var(--text-dark);
+}
+
+/* DARK MODE ROOT */
+.dark {
+  background: var(--dark-bg);
+  color: var(--text-light);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 100px 0px;
+>>>>>>> 97a84e5 (Update Files)
 }
 
 .hero h1 {
@@ -18,8 +56,14 @@ body {
 }
 
 .hero p {
+<<<<<<< HEAD
   font-size: 18px;
   margin-bottom: 20px;
+=======
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+>>>>>>> 97a84e5 (Update Files)
 }
 
 /* BUTTONS */
@@ -47,8 +91,37 @@ body {
   color: white;
 }
 
+<<<<<<< HEAD
 /* FEATURES SECTION */
 .features {
+=======
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.secondary-btn {
+  padding: 12px 22px;
+  border-radius: 12px;
+
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(15, 118, 110, 0.1);
+}
+
+/* =========================
+   FEATURES
+========================= */
+.features {
+  padding: 60px 20px;
+>>>>>>> 97a84e5 (Update Files)
   text-align: center;
   padding: 60px 20px;
 }
@@ -57,7 +130,10 @@ body {
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 /* CARDS */
+=======
+>>>>>>> 97a84e5 (Update Files)
 .feature-cards {
   display: flex;
   justify-content: center;
@@ -65,6 +141,12 @@ body {
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
+=======
+/* =========================
+   CARD
+========================= */
+>>>>>>> 97a84e5 (Update Files)
 .card {
   background: #f4f4f4;
   padding: 25px;
@@ -79,11 +161,20 @@ body {
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.card p {
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+>>>>>>> 97a84e5 (Update Files)
 .card:hover {
   transform: translateY(-10px);
   background: #e8f5e9;
 }
 
+<<<<<<< HEAD
 /* FOOTER */
 .footer {
   text-align: center;
@@ -91,4 +182,63 @@ body {
   background: #2e7d32;
   color: white;
   margin-top: 40px;
+=======
+/* DARK MODE CARD FIX */
+.dark .card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* =========================
+   DARK MODE BUTTON
+========================= */
+.dark-btn-home {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+  color: white;
+
+  border: none;
+  cursor: pointer;
+
+  z-index: 9999;
+  transition: 0.3s ease;
+}
+
+.dark-btn-home:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+>>>>>>> 97a84e5 (Update Files)
 }
