@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signOut
+} from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate, Link } from "react-router-dom";
 import "./Auth.css";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -31,21 +33,25 @@ function Register() {
     }
 
     try {
-      // create user
+      // 1️⃣ Create account
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
 
-      // set username
+      // 2️⃣ Set username
       await updateProfile(userCredential.user, {
         displayName: username,
       });
 
-      alert("Account created successfully!");
+      // 3️⃣ IMPORTANT: logout immediately (prevents dashboard redirect)
+      await signOut(auth);
 
-      // go to login page
+      // 4️⃣ Success message
+      alert("Account created successfully! Please login.");
+
+      // 5️⃣ Redirect to login page
       navigate("/login");
 
     } catch (err) {

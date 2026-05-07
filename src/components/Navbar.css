@@ -1,58 +1,55 @@
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-
-  width: 95%;
+  width: 100%;
   z-index: 1000;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  font-family: poppins, sans-serif;
+
   background: linear-gradient(135deg, #2e7d32, #1b5e20);
-
-  padding: 12px 40px;
-
-  color: white;
-
-  height: 40px; /* better than 40px */
+  padding: 14px 20px;
+  box-sizing: border-box;
 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* LOGO */
 .logo {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  color: white;
 }
 
-/* LINKS CONTAINER */
+/* LINKS (DESKTOP) */
 .links {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
-/* LINKS */
-.links a {
+/* LINK STYLE */
+.nav-link {
   color: white;
-  font-family: "Poppins", "Inter", "Segoe UI", sans-serif;
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
-  transition: 0.3s;
   padding: 6px 10px;
   border-radius: 8px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  white-space: nowrap;
 }
 
-.links a:hover {
-  color: #a5f3fc;
-  letter-spacing: 0.8px;
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* LOGOUT BUTTON */
@@ -71,6 +68,65 @@
   background: #dc2626;
 }
 
-body {
-  padding-top: 80px; /* space for navbar */
+/* HAMBURGER */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+
+    background: #1b5e20;
+    flex-direction: column;
+    align-items: center;
+
+    display: none;
+    padding: 15px 0;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    width: 90%;
+    margin-top: 5px;
+  }
+}
+
+/* ================= VERY SMALL PHONES ================= */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .logout-btn {
+    font-size: 13px;
+  }
 }

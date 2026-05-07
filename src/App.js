@@ -21,7 +21,7 @@ function App() {
       <ThemeProvider>
         <BrowserRouter>
 
-          {/* 🌍 GLOBAL NAVBAR */}
+          {/* 🌍 Navbar always visible */}
           <Navbar />
 
           <Routes>
@@ -58,15 +58,6 @@ function App() {
             />
 
             <Route
-              path="/tips"
-              element={
-                <ProtectedRoute>
-                  <Tips />
-                </ProtectedRoute>
-              }
-            />
-
-            <Route
               path="/progress"
               element={
                 <ProtectedRoute>
@@ -75,7 +66,16 @@ function App() {
               }
             />
 
-            {/* ❌ 404 fallback route */}
+            <Route
+              path="/tips"
+              element={
+                <ProtectedRoute>
+                  <Tips />
+                </ProtectedRoute>
+              }
+            />
+
+            {/* ❌ fallback */}
             <Route path="*" element={<Home />} />
 
           </Routes>
