@@ -1,15 +1,14 @@
 import "./Home.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useTheme } from "../context/ThemeContext";
 
 function Home() {
   const navigate = useNavigate();
+  const { dark, setDark } = useTheme();
 
   return (
     <div className={dark ? "home dark" : "home"}>
 
-<<<<<<< HEAD
-      {/* HERO SECTION */}
-=======
       {/* 🌙 DARK MODE BUTTON */}
       <button
         onClick={() => setDark(!dark)}
@@ -19,42 +18,45 @@ function Home() {
       </button>
 
       {/* HERO */}
->>>>>>> 97a84e5 (Update Files)
       <section className="hero">
-        <h1>🌍 CarbonTrack</h1>
-        <p>Monitor, understand, and reduce your carbon footprint easily.</p>
+        <h1>
+          Track Your <span>Carbon Footprint</span> 🌍
+        </h1>
+
+        <p>
+          Smart insights to help you reduce emissions and live sustainably.
+        </p>
 
         <div className="buttons">
           <Link to="/login">
-            <button>Get Started</button>
+            <button className="primary-btn">Get Started</button>
           </Link>
 
           <Link to="/register">
-            <button className="secondary">Create Account</button>
+            <button className="secondary-btn">Create Account</button>
           </Link>
-
         </div>
       </section>
 
-      {/* FEATURES SECTION */}
+      {/* FEATURES */}
       <section className="features">
-        <h2>Why Use CarbonTrack?</h2>
+        <h2>Why CarbonTrack?</h2>
 
         <div className="feature-cards">
 
           <div className="card" onClick={() => navigate("/dashboard")}>
             <h3>📊 Track Emissions</h3>
-            <p>Monitor your daily carbon footprint from activities.</p>
+            <p>Analyze your daily carbon usage with smart tracking.</p>
           </div>
 
           <div className="card" onClick={() => navigate("/tips")}>
             <h3>🌱 Eco Tips</h3>
-            <p>Get smart suggestions to reduce your impact.</p>
+            <p>Personalized suggestions to reduce your impact.</p>
           </div>
 
           <div className="card" onClick={() => navigate("/progress")}>
             <h3>📈 Progress</h3>
-            <p>See your improvement over time with reports.</p>
+            <p>Visualize your improvement over time.</p>
           </div>
 
         </div>
@@ -62,7 +64,7 @@ function Home() {
 
       {/* FOOTER */}
       <footer className="footer">
-        <p>© 2026 CarbonTrack | Save Earth 🌱</p>
+        <p>© 2026 CarbonTrack • Build a Greener Future 🌱</p>
       </footer>
 
     </div>

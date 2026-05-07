@@ -1,23 +1,17 @@
-<<<<<<< HEAD
+ /* =========================
+   BASE
+========================= */
 .progress-page {
   padding: 40px;
   text-align: center;
-=======
-/* =========================
-   BASE
-========================= */
-.progress {
-  text-align: center;
-  padding: 40px;
   min-height: 100vh;
-  transition: 0.3s ease;
   background: #f8fafc;
   color: #0f172a;
->>>>>>> 97a84e5 (Update Files)
+  transition: 0.3s ease;
 }
 
 /* DARK MODE */
-.dark.progress {
+.dark.progress-page {
   background: #0f172a;
   color: #e2e8f0;
 }
@@ -25,12 +19,12 @@
 /* =========================
    TITLE
 ========================= */
-.progress h1 {
+.progress-page h1 {
   margin-bottom: 25px;
 }
 
 /* =========================
-   SUMMARY CARD
+   SUMMARY
 ========================= */
 .summary {
   display: flex;
@@ -44,39 +38,43 @@
   background: #e8f5e9;
   padding: 20px;
   border-radius: 12px;
-<<<<<<< HEAD
   width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+.dark .card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   CHART
+========================= */
 .chart-box {
   margin-top: 30px;
 }
 
+/* =========================
+   INSIGHT
+========================= */
 .insight {
   margin-top: 30px;
   background: #f1f8e9;
   padding: 20px;
   border-radius: 12px;
-=======
-  margin: 0 auto 25px auto;
-  width: 250px;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.dark .summary {
+.dark .insight {
   background: rgba(255, 255, 255, 0.05);
 }
 
 /* =========================
-   LIST
+   LIST (OLD STYLE OPTIONAL)
 ========================= */
 .list {
   max-width: 400px;
   margin: auto;
 }
 
-/* ITEM CARD */
 .item {
   display: flex;
   align-items: center;
@@ -87,7 +85,6 @@
 
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
-
   transition: 0.3s ease;
 }
 
@@ -116,5 +113,4 @@
   background: linear-gradient(135deg, #0f766e, #22c55e);
   border-radius: 10px;
   transition: width 0.4s ease;
->>>>>>> 97a84e5 (Update Files)
 }

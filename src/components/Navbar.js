@@ -7,24 +7,37 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2>🌱 CarbonTrack</h2>
+      {/* Logo */}
+      <div className="logo">
+        🌱 <span>CarbonTrack</span>
+      </div>
 
+      {/* Links */}
       <div className="links">
-        <Link to="/">Home</Link>
+        <Link to="/" className="nav-link">Home</Link>
 
         {user && (
           <>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/tips">Tips</Link>
-            <Link to="/progress">Progress</Link>
-            <button onClick={logout}>Logout</button>
+
+            <Link to="/dashboard" className="nav-link">Dashboard</Link>
+            <Link to="/progress" className="nav-link">Progress</Link>
+            <Link to="/tips" className="nav-link">Eco Tips</Link>
+
+            <button onClick={logout} className="logout-btn">
+              Logout
+            </button>
+
+            
+
           </>
         )}
 
         {!user && (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <Link to="/login" className="nav-link">Login</Link>
+            <Link to="/register" className="nav-link primary-link">
+              Register
+            </Link>
           </>
         )}
       </div>

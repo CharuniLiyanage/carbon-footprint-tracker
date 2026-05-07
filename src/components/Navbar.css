@@ -1,15 +1,22 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 95%;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   background: linear-gradient(135deg, #2e7d32, #1b5e20);
-  padding: 18px 40px;
+
+  padding: 12px 40px;
 
   color: white;
 
-  /* ❌ remove fixed small height */
-  min-height: 40px;
+  height: 40px; /* better than 40px */
 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
@@ -62,4 +69,8 @@
 
 .logout-btn:hover {
   background: #dc2626;
+}
+
+body {
+  padding-top: 80px; /* space for navbar */
 }

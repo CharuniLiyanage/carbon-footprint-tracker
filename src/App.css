@@ -32,3 +32,65 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f5;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #2e7d32;
+}
+
+.nav {
+  margin: 20px 0;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   GLOBAL THEME VARIABLES
+========================= */
+
+/* LIGHT MODE */
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* APPLY TO WHOLE APP */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}

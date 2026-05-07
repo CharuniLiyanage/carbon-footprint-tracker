@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-/* RESET */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* HERO SECTION */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to right, #2e7d32, #66bb6a);
-  color: white;
-=======
 /* =========================
    ROOT THEME COLORS
 ========================= */
@@ -47,54 +33,48 @@ body {
 .hero {
   text-align: center;
   padding: 100px 0px;
->>>>>>> 97a84e5 (Update Files)
 }
 
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-<<<<<<< HEAD
-  font-size: 18px;
-  margin-bottom: 20px;
-=======
   font-size: 16px;
   opacity: 0.8;
   margin-bottom: 25px;
->>>>>>> 97a84e5 (Update Files)
 }
 
-/* BUTTONS */
-.buttons button {
-  padding: 12px 25px;
-  margin: 10px;
+/* =========================
+   BUTTONS
+========================= */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.primary-btn {
+  padding: 12px 22px;
+  border-radius: 12px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
 
-.buttons button {
-  background: white;
-  color: #2e7d32;
-}
-
-.buttons button:hover {
-  opacity: 0.9;
-}
-
-.buttons .secondary {
-  background: #333;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
+  font-weight: 600;
+
+  transition: 0.3s ease;
 }
 
-<<<<<<< HEAD
-/* FEATURES SECTION */
-.features {
-=======
 .primary-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
@@ -121,19 +101,14 @@ body {
 ========================= */
 .features {
   padding: 60px 20px;
->>>>>>> 97a84e5 (Update Files)
   text-align: center;
-  padding: 60px 20px;
 }
 
 .features h2 {
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
-/* CARDS */
-=======
->>>>>>> 97a84e5 (Update Files)
 .feature-cards {
   display: flex;
   justify-content: center;
@@ -141,48 +116,38 @@ body {
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-=======
 /* =========================
    CARD
 ========================= */
->>>>>>> 97a84e5 (Update Files)
 .card {
-  background: #f4f4f4;
-  padding: 25px;
   width: 260px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .card h3 {
   margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-=======
 .card p {
   font-size: 18px;
   opacity: 0.75;
 }
 
->>>>>>> 97a84e5 (Update Files)
 .card:hover {
-  transform: translateY(-10px);
-  background: #e8f5e9;
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--accent);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.15);
 }
 
-<<<<<<< HEAD
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #2e7d32;
-  color: white;
-  margin-top: 40px;
-=======
 /* DARK MODE CARD FIX */
 .dark .card {
   background: rgba(255, 255, 255, 0.05);
@@ -192,11 +157,28 @@ body {
 /* =========================
    FOOTER
 ========================= */
+/* =========================
+   FOOTER - BASE
+========================= */
 .footer {
   text-align: center;
   padding: 25px;
-  opacity: 0.7;
   font-size: 14px;
+
+  background: #f1f5f9;        /* light background */
+  color: #334155;             /* readable text */
+  border-top: 1px solid #e2e8f0;
+
+  margin-top: 40px;
+}
+
+/* =========================
+   DARK MODE FIX
+========================= */
+.dark .footer {
+  background: #020617;        /* slightly darker than page */
+  color: #94a3b8;             /* soft readable gray */
+  border-top: 1px solid #1e293b;
 }
 
 /* =========================
@@ -240,5 +222,4 @@ body {
   .buttons {
     flex-direction: column;
   }
->>>>>>> 97a84e5 (Update Files)
 }

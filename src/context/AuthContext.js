@@ -2,10 +2,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 
-const AuthContext = createContext();
+const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(undefined);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +17,6 @@ export function AuthProvider({ children }) {
     return () => unsub();
   }, []);
 
-  // 🔐 logout function
   const logout = () => signOut(auth);
 
   return (
@@ -27,6 +26,13 @@ export function AuthProvider({ children }) {
   );
 }
 
+// ✅ SAFE HOOK (prevents crash)
 export function useAuth() {
-  return useContext(AuthContext);
+  const context = useContext(AuthContext);
+
+  if (!context) {
+    throw new Error("useAuth must be used inside AuthProvider");
+  }
+
+  return context;
 }

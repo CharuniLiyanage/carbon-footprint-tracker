@@ -1,8 +1,7 @@
 /* =========================
-   CONTAINER
+   AUTH PAGE CONTAINER
 ========================= */
 .auth-container {
-<<<<<<< HEAD
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -11,15 +10,23 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 🌿 Glass Card Effect */
+/* =========================
+   AUTH CARD (GLASS EFFECT)
+========================= */
 .auth-card {
   width: 360px;
-  padding: 35px;
+  padding: 30px;
+  border-radius: 18px;
+
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid #c8e6c9;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  color: #1b5e20;
   text-align: center;
+
   transition: 0.3s ease;
 }
 
@@ -27,139 +34,52 @@
   transform: translateY(-3px);
 }
 
-/* 🌱 Title */
-.auth-card h2 {
-=======
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-}
-
-/* =========================
-   CARD
-========================= */
-.auth-card {
-  width: 360px;
-  padding: 30px;
-  border-radius: 18px;
-
-  background: var(--card);
-  color: var(--text);
-
-  border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
 /* =========================
    TITLE
 ========================= */
 .auth-card h2 {
-  text-align: center;
->>>>>>> 97a84e5 (Update Files)
   margin-bottom: 20px;
-  color: #1b5e20;
   font-weight: 600;
+  color: #1b5e20;
 }
 
-<<<<<<< HEAD
-/* ✨ Inputs */
-=======
 /* =========================
    INPUTS
 ========================= */
->>>>>>> 97a84e5 (Update Files)
 .auth-card input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-<<<<<<< HEAD
+
   border: 1px solid #c8e6c9;
-  border-radius: 8px;
+  border-radius: 10px;
+
   outline: none;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .auth-card input:focus {
   border-color: #2e7d32;
-  box-shadow: 0 0 5px rgba(46,125,50,0.3);
-}
-
-/* 🚀 Button */
-=======
-
-  border-radius: 10px;
-  border: 1px solid var(--border);
-
-  background: transparent;
-  color: var(--text);
-
-  outline: none;
-  transition: 0.3s;
-}
-
-.auth-card input:focus {
-  border-color: #22c55e;
+  box-shadow: 0 0 6px rgba(46,125,50,0.3);
 }
 
 .auth-card input::placeholder {
-  color: rgba(150,150,150,0.7);
+  color: rgba(120,120,120,0.7);
 }
 
 /* =========================
    BUTTON
 ========================= */
->>>>>>> 97a84e5 (Update Files)
 .auth-card button {
   width: 100%;
   padding: 12px;
   margin-top: 15px;
-<<<<<<< HEAD
+
   background: linear-gradient(135deg, #2e7d32, #66bb6a);
   color: white;
+
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.auth-card button:hover {
-  transform: scale(1.03);
-  background: linear-gradient(135deg, #1b5e20, #43a047);
-}
-
-/* 🔗 Links */
-.auth-link {
-  margin-top: 15px;
-  font-size: 14px;
-}
-
-.auth-link a {
-  color: #2e7d32;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.auth-link a:hover {
-  text-decoration: underline;
-}
-
-/* 📱 Mobile Responsive */
-@media (max-width: 480px) {
-  .auth-card {
-    width: 90%;
-    padding: 25px;
-  }
-=======
-
   border-radius: 10px;
-  border: none;
-
-  background: linear-gradient(135deg, #0f766e, #22c55e);
-  color: white;
 
   font-weight: 600;
   cursor: pointer;
@@ -183,23 +103,39 @@
 .error {
   background: rgba(239, 68, 68, 0.1);
   color: #ef4444;
+
   padding: 10px;
   border-radius: 8px;
+
   margin-bottom: 10px;
-  text-align: center;
+  font-size: 14px;
 }
 
 /* =========================
-   LINK
+   LINK TEXT
 ========================= */
 .auth-link {
-  text-align: center;
   margin-top: 15px;
-  opacity: 0.8;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 .auth-link a {
-  color: #22c55e;
+  color: #2e7d32;
   font-weight: 500;
->>>>>>> 97a84e5 (Update Files)
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+  .auth-card {
+    width: 90%;
+    padding: 25px;
+  }
 }

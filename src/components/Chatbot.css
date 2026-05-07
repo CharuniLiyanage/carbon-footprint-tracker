@@ -1,0 +1,36 @@
+/* =========================
+   AI CHAT - LIGHT MODE
+========================= */
+.chat-container {
+  margin-top: 20px;
+}
+
+.answer-box {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+/* =========================
+   AI CHAT - DARK MODE FIX
+========================= */
+.dark .answer-box {
+  background: #1e293b;   /* card background */
+  color: #f8fafc;        /* bright readable text */
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   AI TITLE
+========================= */
+.chat-container h3 {
+  margin-bottom: 10px;
+}
+
+.dark .chat-container h3 {
+  color: #f8fafc;
+}
